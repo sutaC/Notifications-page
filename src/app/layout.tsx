@@ -12,7 +12,28 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body>{children}</body>
+			<body>
+				{children}
+
+				<footer>
+					Challenge by
+					<a
+						href='https://www.frontendmentor.io?ref=challenge'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						Frontend Mentor
+					</a>
+					. Coded by{" "}
+					<a
+						href='https://www.frontendmentor.io/profile/sutaC'
+						rel='noopener noreferrer'
+					>
+						sutaC
+					</a>
+					.
+				</footer>
+			</body>
 		</html>
 	);
 }
