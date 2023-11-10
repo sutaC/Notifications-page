@@ -14,9 +14,15 @@
 
 .header button {
     border: none;
+    outline: none;
     background: transparent;
     cursor: pointer;
     color: var(--clr-text-highlight);
+}
+
+.header button:focus,
+.header button:hover {
+    color: var(--clr-accent);
 }
 
 .wrapper {

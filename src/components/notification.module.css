@@ -12,7 +12,7 @@
 }
 
 .notification:has(.unread) {
-    background: color-mix(in srgb, var(--clr-notification-unread-bg) 50%, var(--clr-main-bg) 50%);
+    background: var(--clr-body-bg);
 }
 
 .notification a {
@@ -50,6 +50,14 @@
     color: var(--clr-accent);
 }
 
+.highlight:focus,
+.highlight:hover,
+.author:focus,
+.author:hover {
+    color: var(--clr-accent);
+}
+
+
 .time {
     margin: 0.25em 0;
     opacity: 0.5;
@@ -64,6 +72,13 @@
     margin: 0.75em 0;
 
     border: 1px solid var(--clr-textbox-bd);
+    border-radius: 0.25rem;
 
     text-wrap: balance;
+    cursor: pointer;
+}
+
+.textbox:focus,
+.textbox:hover {
+    background: var(--clr-textbox-focus-bg);
 }

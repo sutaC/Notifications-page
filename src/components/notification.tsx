@@ -62,13 +62,15 @@ export default function Notification(params: {
 			</div>
 
 			{params.notificationObj.content.attachment ? (
-				<Image
-					src={`/images/${params.notificationObj.content.attachment}`}
-					alt='Notification attachment'
-					width={50}
-					height={50}
-					className={styles.attachment}
-				></Image>
+				<a href='#'>
+					<Image
+						src={`/images/${params.notificationObj.content.attachment}`}
+						alt='Notification attachment'
+						width={50}
+						height={50}
+						className={styles.attachment}
+					></Image>{" "}
+				</a>
 			) : (
 				""
 			)}

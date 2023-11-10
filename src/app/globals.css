@@ -4,7 +4,7 @@
     --clr-main-bg: hsl(0, 0%, 100%);
     --clr-body-bg: hsl(210, 60%, 98%);
     --clr-textbox-bd: hsl(211, 68%, 94%);
-    --clr-notification-unread-bg: hsl(205, 33%, 90%);
+    --clr-textbox-focus-bg: hsl(205, 33%, 90%);
     --clr-text-light: hsl(219, 14%, 63%);
     --clr-text-highlight: hsl(219, 12%, 42%);
     --clr-text: hsl(224, 21%, 14%);
