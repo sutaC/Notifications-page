@@ -40,8 +40,8 @@ export default function Notification(params: {
 				height={45}
 			></Image>
 
-			<div>
-				<p className={`${styles.content} ${read ? "" : styles.unread}`}>
+			<div className={styles.content}>
+				<p className={read ? "" : styles.unread}>
 					<a href='#' className={styles.author}>
 						{params.notificationObj.user.name}
 					</a>{" "}
