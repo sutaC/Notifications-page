@@ -25,9 +25,11 @@ export default function Header() {
 	}, []);
 
 	return (
-		<header>
-			<h1>Notifications</h1>
-			<p>{unread}</p>
+		<header className={styles.header}>
+			<div className={styles.wrapper}>
+				<h1>Notifications</h1>
+				<p className={styles.unread}>{unread}</p>
+			</div>
 			<button onClick={handleMarkAllRead}>Mark as read</button>
 		</header>
 	);

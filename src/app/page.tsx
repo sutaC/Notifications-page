@@ -7,7 +7,7 @@ export default function Page() {
 	const notifications = getNotifications();
 
 	return (
-		<main>
+		<main className={styles.main}>
 			<Header></Header>
 			{notifications.map((notification, idx) => (
 				<Notification

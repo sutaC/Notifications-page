@@ -32,35 +32,46 @@ export default function Notification(params: {
 	}, []);
 
 	return (
-		<div onClick={handleMarkRead}>
+		<div onClick={handleMarkRead} className={styles.notification}>
+			<Image
+				src={`/images/${params.notificationObj.user.profilePic}`}
+				alt='Profile Picture'
+				width={45}
+				height={45}
+			></Image>
+
 			<div>
+				<p className={`${styles.content} ${read ? "" : styles.unread}`}>
+					<a href='#' className={styles.author}>
+						{params.notificationObj.user.name}
+					</a>{" "}
+					{params.notificationObj.content.message}{" "}
+					<a href='#' className={styles.highlight}>
+						{params.notificationObj.content.highlight}
+					</a>{" "}
+					<a href='#' className={styles.anhor}>
+						{params.notificationObj.content.anhor}
+					</a>
+				</p>
+
+				<p className={styles.time}>{params.notificationObj.time}</p>
+
+				<div className={styles.textbox}>
+					{params.notificationObj.content.textbox}
+				</div>
+			</div>
+
+			{params.notificationObj.content.attachment ? (
 				<Image
-					src={`/images/${params.notificationObj.user.profilePic}`}
-					alt='Profile Picture'
+					src={`/images/${params.notificationObj.content.attachment}`}
+					alt='Notification attachment'
 					width={50}
 					height={50}
+					className={styles.attachment}
 				></Image>
-				<div>
-					<p className={read ? "" : styles.unread}>
-						<span>{params.notificationObj.user.name}</span>
-						{params.notificationObj.content.message}{" "}
-						<span>{params.notificationObj.content.highlight}</span>{" "}
-						<span>{params.notificationObj.content.anhor}</span>
-					</p>
-					<p>{params.notificationObj.time}</p>
-				</div>
-				{params.notificationObj.content.attachment ? (
-					<Image
-						src={`/images/${params.notificationObj.content.attachment}`}
-						alt='Notification attachment'
-						width={50}
-						height={50}
-					></Image>
-				) : (
-					""
-				)}
-			</div>
-			<div>{params.notificationObj.content.textbox}</div>
+			) : (
+				""
+			)}
 		</div>
 	);
 }
